@@ -1,0 +1,58 @@
+*{box-sizing: border-box;}
+
+
+
+img{
+    vertical-align: middle;
+}
+
+.container{
+    width: 100%;
+    max-width: 1040px;
+    padding:0 20px;
+    margin: auto ;
+}
+
+.hero__title{
+    margin-left: 350px;
+    margin-right: 350px ;
+}
+
+.hero__form{
+    text-align: center;
+}
+
+.hero__label{
+    display: inline-block;
+    font-weight: 700;
+}
+
+.hero__input{
+    margin-right:20px ;
+    margin-left:20px ;
+
+}
+
+.hero__list{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    list-style: none;
+}
+
+.hero__item{
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    padding: 20px 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+}
+
+.hero__text{
+    margin-top: 10px;
+
+}
