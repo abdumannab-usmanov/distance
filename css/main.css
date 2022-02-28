@@ -56,3 +56,13 @@ img{
     margin-top: 10px;
 
 }
+
+.error{
+    color: red;
+    
+}
+
+.success{
+    color: yellowgreen;
+    background-color: aliceblue;
+}

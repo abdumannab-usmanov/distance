@@ -9,37 +9,58 @@ var elFormplane = document.querySelector(".hero__fourth")
 
 
 
+function speed (miles,speed){
+    return miles / speed
+}
 
 
 elForm.addEventListener("submit", function(event){
     event.preventDefault();
     
+    var elFormInputVal = elFormInput.value;
     var people = 3.6;
     var second = 20.1;
     var third = 70;
-    var fouth = 800;
-    var elInput = elFormInput.value;
+    var fourth = 800;
     
-    function man() {
-        return elInput / people;
+
+
+    if(elFormInputVal <=0 || isNaN(elFormInputVal)){
+        elFormhuman.textContent = "Add only number !!!"
+        elFormbike.textContent = "Add only number !!!"
+        elFormcar.textContent = "Add only number !!!"
+        elFormplane.textContent = "Add only number !!!"
+
+        elFormhuman.classList.add("error");
+        elFormbike.classList.add("error");
+        elFormcar.classList.add("error");
+        elFormplane.classList.add("error");
+
+
+        elFormhuman.classList.remove("success")
+        elFormbike.classList.remove("success")
+        elFormcar.classList.remove("success")
+        elFormplane.classList.remove("success")
+
+        return
     }
-    
-    function bicycle() {
-        return elInput / second;
+
+    else{
+        elFormhuman.classList.remove("error")
+        elFormbike.classList.remove("error")
+        elFormcar.classList.remove("error")
+        elFormplane.classList.remove("error")
+
+        elFormhuman.classList.add("success")
+        elFormbike.classList.add("success")
+        elFormcar.classList.add("success")
+        elFormplane.classList.add("success")
+
     }
-    
-    function car() {
-        return elInput / third;
-    }
-    
-    
-    function plane () {
-        return elInput / fouth;
-    }
-    
-    
-    elFormhuman.textContent = Math.round(man ())+ "soat";
-    elFormbike.textContent = Math.round(bicycle ())+ "soat";
-    elFormcar.textContent = Math.round(car ())+ "soat";
-    elFormplane.textContent = Math.round(plane ())+ "soat";
+
+    elFormhuman.textContent = Math.round (speed (elFormInputVal,people))+ "soat";
+    elFormbike.textContent = Math.round (speed (elFormInputVal,second))+ "soat";
+    elFormcar.textContent = Math.round (speed (elFormInputVal,third))+ "soat";
+    elFormplane.textContent = Math.round (speed (elFormInputVal,fourth))+ "soat";
 })
+
